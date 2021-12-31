@@ -126,7 +126,7 @@ console.log(`__________`); // prints: 101
 5 __ 5 // returns false
 
 // greater than
-10 _ 5 // returns false
+10 _ 5 // returns true
 
 // greater than or equal
 10 __ 10 // returns true
