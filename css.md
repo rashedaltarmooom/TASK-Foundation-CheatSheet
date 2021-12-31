@@ -1,4 +1,4 @@
-# JS
+# CSS
 
 ## CSS Basics
 
@@ -20,7 +20,7 @@ In CSS, there are 3 types of **SELECTORS**
 **Tags**
 
 ```css
-_______________ {
+h1 {
   /* This will change the styling for every h1 tag in the linked html file */
 }
 ```
@@ -28,7 +28,7 @@ _______________ {
 **Classes**
 
 ```css
-_______________ {
+.container {
   /* This will change the styling for every tag 
     in the linked html file that implemented 
     the class container. 
@@ -42,7 +42,7 @@ _______________ {
 **Ids**
 
 ```css
-_______________ {
+#box1 {
   /* This will change the styling for every tag 
     in the linked html file that implemented 
     the id box1. 
@@ -66,96 +66,96 @@ In CSS, we use the Kebab case (separate each word with a dash `-`)
 
 ```css
 /*To change the background color*/
-___: ___;
+background-color: red;
 
 /*To change the font color*/
-___: ___;
+color: black;
 
 /*To change the border color*/
-___: ___;
+border-color: blue;
 ```
 
 ### Box Model
 
 ```css
 /*To add padding  */
-___: ___;
+padding: 2px;
 
 /*To add margin */
-___: ___;
+margin: 4px;
 
 /*To add border */
-___: ___;
+border: 2px solid black;
 ```
 
 ### Font
 
 ```css
 /*To change the font size */
-___: ___;
+font-size: 12px;
 
 /*To change the font family  */
-___: ___;
+font-family: FONT_NAME;
 
-/*To change the font width */
-___: ___;
+/*To change the font weight */
+font-weight: 400;
 ```
 
 ### Sizes
 
 **Units**
 There are multiple units in CSS to size things
-`____`: a CSS unit that represents number of pixels
-`____`: a CSS unit that represents the percentage relatively to the container
-`____`: a CSS unit which is relative to the font size of the parent element
-`____`: a CSS unit which is relative to the font size of the html element
-`____`: a CSS unit that represents the view height. We use it usually for background size and set it to 100 to get the size of the whole screen vertically.
+`px`: a CSS unit that represents number of pixels
+`%`: a CSS unit that represents the percentage relatively to the container
+`em`: a CSS unit which is relative to the font size of the parent element
+`rem`: a CSS unit which is relative to the font size of the html (root) element
+`vh`: a CSS unit that represents the view height. We use it usually for background size and set it to 100 to get the size of the whole screen vertically.
 
 ```css
 /*To change width */
-___: ___;
+width: 50%; /*Takes half of the screen*/
 
 /*To change height  */
-___: ___;
+height: 100vh; /*Takes the whole screen size*/
 ```
 
 ### Position
 
 ```css
 /*
-To make everything inside a container relative to it. we use: position: ___
+To make everything inside a container relative to it. we use: position: relative
 */
-position: ________;
+position: relative;
 
-/*To make any item in the container doesn't care about the container content, and it doesn't mind being on top of the over elements we use position: ____
+/*To make any item in the container doesn't care about the container content, and it doesn't mind being on top of the over elements we use position: absolute
 This is perfect to put things stacking on top of each other
-Making the position ____ allows you to use the following properties
+Making the position absolute allows you to use the following properties
 - top:
 - bottom: 
 - left: 
 - right: 
 - z-index: 
 */
-position: _________;
+position: absolute;
 
-/*When position is (absolute), you can put things stacking on each other, but you can specify which element should be on visible on the top of another element, we use ___ and add a higher number to it */
-______: 1000;
+/*When position is (absolute), you can put things stacking on each other, but you can specify which element should be  visible on the top of another element, we use z-index and add a higher number to it */
+z-index: 1000;
 ```
 
 ### Display
 
 ```css
 /*To make an element take a whole block (a whole row) we use */
-display: ___;
+display: block;
 
 /*To make an element takes only the size that it needs, without taking a whole row  */
-display: ___;
+display: inline;
 
 /*To enable a container to be horizontal we use  */
-display: ___;
+display: flex;
 
 /*To hide an element  */
-display: _____;
+display: none;
 ```
 
 ### Flex
@@ -165,14 +165,14 @@ display: _____;
 display: flex;
 
 /*To change the main axis to row or column you use  */
-______: row;
-______: column;
+flex-direction: row;
+flex-direction: column;
 
 /*To make things center in the (MAIN AXIS) you use  */
-______: center;
+justify-content: center;
 
 /*To make things center in the (CROSS AXIS) you use  */
-______: center;
+align-items: center;
 ```
 
 **common flex usages**
