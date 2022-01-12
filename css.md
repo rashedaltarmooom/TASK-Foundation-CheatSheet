@@ -1,8 +1,7 @@
-# JS
+# CSS Basics
 
-## CSS Basics
+### Comments
 
-**Comments**
 Comments in css are in the following format only
 
 ```css
@@ -17,7 +16,7 @@ In CSS, there are 3 types of **SELECTORS**
 2. Classes
 3. Ids
 
-**Tags**
+### Tags
 
 ```css
 _______________ {
@@ -25,7 +24,7 @@ _______________ {
 }
 ```
 
-**Classes**
+### Classes
 
 ```css
 _______________ {
@@ -39,7 +38,7 @@ _______________ {
 }
 ```
 
-**Ids**
+### Ids
 
 ```css
 _______________ {
@@ -175,7 +174,8 @@ ______: center;
 ______: center;
 ```
 
-**common flex usages**
+## common flex usages
+
 Making a container centers everything inside it, vertically and horizontally.
 
 1. Give the container a size of 100vh, so it can center vertically on the whole screen
