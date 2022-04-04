@@ -2,9 +2,9 @@
 
 ## Main brackets
 
-- `{ }`: is mainly used for `________`
-- `( )`: is mainly used for `________`
-- `[ ]`: is mainly used for `________`
+- `{ }`: is mainly used for `declare an object`
+- `( )`: is mainly used for `to specify a group of specific actions`
+- `[ ]`: is mainly used for `declare an array item and to access an array item`
 
 ## Javascript Basics
 
@@ -24,25 +24,25 @@ comment */
 
 **Variables and constants**
 variables -> `let`
-`___`: for variables
-`___`: for constants
+`let`: for variables
+`const`: for constants
 
 ```js
-// to create a new variable
-________;
+// to create a new variable 
+let x= 10;
 // to create a new constant
-________;
+const num= 15;
 ```
 
 **Main Types:**
 
 ```js
 // Number:
-let a = _____;
+let a = 23;
 // String:
-let b = _____;
+let b = "Rashed Altarmoom";
 // Boolean:
-let c = _____;
+let c = 0;
 ```
 
 **Print**
@@ -50,19 +50,19 @@ To print out on the console
 
 ```js
 // 1. printing string
-______.log(_____Hello World_____); // -> Hello World
+console.log(Hello World); // -> Hello World
 
 // 2. printing values inside stored variables or constant
 const pi = 3.14;
-______.log(pi); // 3.14
+console.log(pi); // 3.14
 
 // 3. printing more than one element,
 const x = 5;
 const y = 10;
-______.log(____________________); // 5 Hello World 10
+console.log(`${x} Hello World ${y}`); // 5 Hello World 10
 
 // 4. console.log adds one line after it finishes
-______.log(); // will just print an empty new line
+console.log("\n"); // will just print an empty new line
 ```
 
 ### Basics
@@ -75,10 +75,10 @@ Every text should be between quotation marks.
 **Special Characters**
 
 ```js
-console.log("________"); // prints a new line
-console.log("________"); // prints a tab   space
-console.log("________"); // prints a single back slash \
-console.log("________"); // prints a single quotation mark "
+console.log("\n"); // prints a new line
+console.log("\t"); // prints a tab   space
+console.log("\\"); // prints a single back slash \
+console.log("\""); // prints a single quotation mark "
 ```
 
 **String Interpolation**
@@ -87,27 +87,27 @@ To add values inside a string we use the back tics `` `TEXT ${VARIABLE or COMPUT
 ```js
 const x = 1;
 const y = 100;
-console.log(`__________`); // prints: x:1, y:100
-console.log(`__________`); // prints: 101
+console.log(`x: ${x}, y: ${y}`); // prints: x:1, y:100
+console.log(`${y+1}`); // prints: 101
 ```
 
 **Mathmatical operations**
 
 ```js
 // addition
-10 _ 5
+10 + 5
 
 // subtraction
-10 _ 5
+10 - 5
 
 // multiplication
-10 _ 5
+10 * 5
 
 // division
-10 _ 5
+10 / 5
 
 // remainder: The reminder of the division
-10 _ 5
+10 % 5
 
 ```
 
@@ -117,32 +117,32 @@ console.log(`__________`); // prints: 101
 
 ```js
 // Equals
-"5" __ 5 // returns true
+"5" == 5 // returns true
 
 // Strictly Equals (Better usage: returns true if same value, same type)
-"5" ___ 5 // returns true
+"5" === 5 // returns true
 
 // doesn't equal
-5 __ 5 // returns false
+5 !== 5 // returns false
 
 // greater than
-10 _ 5 // returns true
+10 > 5 // returns true
 
 // greater than or equal
-10 __ 10 // returns true
+10 >== 10 // returns true
 
 // less than
-10 _ 5 // returns false
+10 < 5 // returns false
 
 // less than or equal
-10 _ 5 // returns false
+10 <== 5 // returns false
 
 
 // connects 2 booleans, both of them should be true to make the final result true
-10 > 5 __ "Hello" == "Hi" // returns false, because the second one is false
+10 > 5 && "Hello" == "Hi" // returns false, because the second one is false
 
 // connects 2 booleans, one of them should be true to make the final result true
-10 > 5 __ "Hello" == "Hi" // returns true, because the first one is true
+10 > 5 || "Hello" == "Hi" // returns true, because the first one is true
 ```
 
 **If Statement**
@@ -150,7 +150,7 @@ console.log(`__________`); // prints: 101
 ```js
 // The condition inside the () should return either true or false
 const x = 5;
-___(x === 5){
+if(x === 5){
   // statement that will be executed if the condition was true
 }
 
@@ -160,7 +160,7 @@ const x = 5;
 if(x!=5){
   // do job 1
 }
-____{
+else{
   // do job 2
   // This code will only be execute if only the condition inside the if didn't work
   // you don't put a condition after the else statement
@@ -170,10 +170,10 @@ ____{
 if(CONDITION){
   // job 1
 }
-____ __(CONDITION 2){
+else if(CONDITION 2){
   // job 2
 }
-____ __(CONDITION 2){
+else if(CONDITION 2){
   // job 3
 }
 else{
@@ -194,7 +194,7 @@ Even numbers will return true on the following statement
 ```js
 const x = ???
 // if you want to check if x is even, you do the following condition
-if(___________){
+if(x % 2 = 0){
   // will only be executed if x was event
 }
 ```
@@ -210,7 +210,7 @@ You deal with functions in 2 main things
 
 ```js
 // 1. function creation
-________ functionName(){
+function functionName(){
   // This code will be executed when you call the function
 }
 
@@ -225,22 +225,22 @@ functionName()
 
 ```js
 // 1. Function that takes multiple arguments
-function foo_________{
+function foo(){
 }
 
 // 2. Calling the function and passing multiple parameters
-______________________
+foo();
 
 
 ```
 
 **Return**
-A function can return using the command `_______` by the end of the function
+A function can return using the command `return` by the end of the function
 
 ```js
 // this function for example returns the square of any number you plug it
 function square(x){
-  ______ x * x;
+  return x * x;
 }
 console.log(square(4)) // this will log 16
 ```
@@ -265,10 +265,10 @@ let numbers = ___ADD_ANY_NUMBER_HERE___;
 const array = [100, 90, 80, 40];
 
 // To access the first element
-array____;
+array[0];
 
 // To access the second element
-array____;
+array[1];
 //
 ```
 
@@ -277,8 +277,8 @@ array____;
 ```js
 const array = [100, 90, 80, 40];
 
-array._____; // returns number of elements in the array
-console.log(array.____); // prints number of elements in the array
+array.length; // returns number of elements in the array
+console.log(array.length); // prints number of elements in the array
 //
 ```
 
@@ -288,14 +288,14 @@ console.log(array.____); // prints number of elements in the array
 const array = [100, 90, 80, 40];
 
 // to get the last element in the array
-array[__________];
+array[array.length];
 ```
 
 **push and pop**
 
 ```js
-array._____; // adds a new element
-array._____; // removes the last element
+array.push; // adds a new element
+array.slice; // removes the last element
 //
 ```
 
@@ -303,15 +303,15 @@ array._____; // removes the last element
 
 There are 2 main loops
 
-1. `____` loop
-2. `____` loop
+1. `for` loop
+2. `while` loop
 
 ```js
-____(condition){
+while(condition){
   // keeps looping while the condition is true
 }
 
-___(let i=0; i<10; i++){
+for(let i=0; i<10; i++){
   // initializes a counter
   // keeps looping while the condition is true
   // and increments on every loop
