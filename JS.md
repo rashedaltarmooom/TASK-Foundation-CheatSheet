@@ -326,9 +326,10 @@ for(let i=0; i<10; i++){
 // the function way
 function foo() {}
 // the arrow function way
-___________;
-___________;
-___________;
+(a, b) => {
+  let numb = 42;
+  return a + b + numb;
+}
 ```
 
 ### Iteration Methods
@@ -346,12 +347,12 @@ array.SOME_ARROW_FUNCTION((element) => {
 
 The following are the main iteration methods
 
-1. `._______`: just goes over all the elements, doesn't return anything, and doesn't require you to pass a function that returns anything
-2. `.____`: returns a filtered copy of the array that is based on a condition that you return from the function you pass it.
-3. `.____`: returns a transformed copy of the array that is based on a returned shape of every element that you return from the function you pass it
-4. `.____`: looks exactly like `.filter`, but it only returns the first element that matches the condition
-5. `.____`: looks exactly like `.find`, but it only returns true if it finds 1 element that matches the condition
-6. `.____`: returns a single value that is compiled throught the whole array using `previous` and `current` values being passed in passed function. We usually use it to get the sum
+1. `.forEach()`: just goes over all the elements, doesn't return anything, and doesn't require you to pass a function that returns anything
+2. `.filter()`: returns a filtered copy of the array that is based on a condition that you return from the function you pass it.
+3. `.map()`: returns a transformed copy of the array that is based on a returned shape of every element that you return from the function you pass it
+4. `.find()`: looks exactly like `.filter`, but it only returns the first element that matches the condition
+5. `.every()`: looks exactly like `.find`, but it only returns true if it finds 1 element that matches the condition
+6. `.findIndex`: returns a single value that is compiled throught the whole array using `previous` and `current` values being passed in passed function. We usually use it to get the sum
 
 ```js
 const array = [10, 20, 30, 40, 50, 60];
@@ -364,7 +365,7 @@ array.___((prev, current) => prev + current); // returns the sum of the array (2
 
 # Objects
 
-The structure of object is a pair of `_______:_______`
+The structure of object is a pair of `key:value`
 
 ```js
 // To create an object
@@ -386,7 +387,7 @@ const someObj = {
   key2: "value2",
 };
 const keyName = "shade of red";
-console.log(someObj___keyName___);
+console.log(someObj[keyName]);
 ```
 
 ## Adding new proprties to the object
@@ -396,7 +397,7 @@ const someObj = {
   key1: "value1",
   key2: "value2",
 };
-someObject_____;
+someObject.key3= "value3";
 ```
 
 # Classes
@@ -409,13 +410,13 @@ Classes only have 2 main things to write inside them
 
 ```js
 // to create a new class
-____ ClassName{
+class ClassName{
 
 
 }
 
 // creating object
-const object = ____ ClassName();
+const object = new ClassName();
 
 // Adding properties to the class (without a constructor)
 class ClassName{
@@ -429,10 +430,11 @@ class ClassName{
 ```js
 class ClassName {
   // the ordinary function way
-  _________;
+  firstName: "John";
 
   // the arrow function way
-  _________;
+  className = (x) => {
+    console.log('  ', x);
 }
 ```
 
@@ -447,10 +449,10 @@ A constructor is just a special **method** that has the following features
 ```js
 // creating the constructor
 class ClassName {
-  __________(name, age, interests) {
-    _____.name = name;
-    _____.age = age;
-    _____.interests = interests;
+  constructor(name, age, interests) {
+    this.name = name;
+    this.age = age;
+    this.interests = interests;
   }
 }
 ```
