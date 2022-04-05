@@ -41,7 +41,7 @@ h1 {
 ### Ids
 
 ```css
-.class {
+.box1 {
   /* This will change the styling for every tag 
     in the linked html file that implemented 
     the id box1. 

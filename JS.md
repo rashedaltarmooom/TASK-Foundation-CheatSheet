@@ -88,7 +88,7 @@ To add values inside a string we use the back tics `` `TEXT ${VARIABLE or COMPUT
 const x = 1;
 const y = 100;
 console.log(`x: ${x}, y: ${y}`); // prints: x:1, y:100
-console.log(`${y+1}`); // prints: 101
+console.log(`${y+x}`); // prints: 101
 ```
 
 **Mathmatical operations**
@@ -194,7 +194,7 @@ Even numbers will return true on the following statement
 ```js
 const x = ???
 // if you want to check if x is even, you do the following condition
-if(x % 2 = 0){
+if(x % 2 == 0){
   // will only be executed if x was event
 }
 ```
@@ -288,14 +288,14 @@ console.log(array.length); // prints number of elements in the array
 const array = [100, 90, 80, 40];
 
 // to get the last element in the array
-array[array.length];
+array[array.length-1];
 ```
 
 **push and pop**
 
 ```js
-array.push; // adds a new element
-array.slice; // removes the last element
+array.push(); // adds a new element
+array.pop(); // removes the last element
 //
 ```
 
@@ -334,7 +334,7 @@ function foo() {}
 
 ### Iteration Methods
 
-- Iteration methods work on **\*\***\_\_\_\_**\*\*** only!
+- Iteration methods work on **array** only!
 - All iteration methods go over evrey single element of the array
 - Iteration methods take a function that has a parameter of the current value of the array. Preferred to use arrow function inside it.
 
@@ -351,16 +351,16 @@ The following are the main iteration methods
 2. `.filter()`: returns a filtered copy of the array that is based on a condition that you return from the function you pass it.
 3. `.map()`: returns a transformed copy of the array that is based on a returned shape of every element that you return from the function you pass it
 4. `.find()`: looks exactly like `.filter`, but it only returns the first element that matches the condition
-5. `.every()`: looks exactly like `.find`, but it only returns true if it finds 1 element that matches the condition
-6. `.findIndex`: returns a single value that is compiled throught the whole array using `previous` and `current` values being passed in passed function. We usually use it to get the sum
+5. `.includes()`: looks exactly like `.find`, but it only returns true if it finds 1 element that matches the condition
+6. `.reduce()`: returns a single value that is compiled throught the whole array using `previous` and `current` values being passed in passed function. We usually use it to get the sum
 
 ```js
 const array = [10, 20, 30, 40, 50, 60];
-array.___((e) => e / 10); // returns a transformed array equals to [1,2,3,4,5]
-array.___((e) => e <= 30); // returns a filtered array equals to [10, 20, 30]
+array.map((e) => e / 10); // returns a transformed array equals to [1,2,3,4,5]
+array.filter((e) => e <= 30); // returns a filtered array equals to [10, 20, 30]
 array.___((e) => e === 20); // returns 20
 array.___((e) => e === 20); // returns true
-array.___((prev, current) => prev + current); // returns the sum of the array (210)
+array.reduce((prev, current) => prev + current); // returns the sum of the array (210)
 ```
 
 # Objects
@@ -369,10 +369,10 @@ The structure of object is a pair of `key:value`
 
 ```js
 // To create an object
-const object = _
+const object = {
 PROPERTY_NAME: VALUE,
 "PROPERTY NAME 2": VALUE, // if there are spaces, you can use the quotation marks
-_
+}
 
 // to access one element of the object, we have couple of ways
 object.PROPERTY_NAME
@@ -461,5 +461,5 @@ class ClassName {
 
 ```js
 class ParentClassName{}
-class ChildClassName _______ ParentClassName{}
+class ChildClassName extendes ParentClassName{}
 ```

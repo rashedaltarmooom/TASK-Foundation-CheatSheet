@@ -6,7 +6,7 @@
 
 `ls`: is used to list all items in a folder
 
-`node`: is used to print the current working directory to know where we are in the folder structure
+`pwd`: is used to print the current working directory to know where we are in the folder structure
 
 ## Github basics
 
