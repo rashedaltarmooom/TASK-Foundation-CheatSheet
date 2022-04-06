@@ -225,11 +225,11 @@ functionName()
 
 ```js
 // 1. Function that takes multiple arguments
-function foo(){
+function foo{
 }
 
 // 2. Calling the function and passing multiple parameters
-foo();
+foo;
 
 
 ```
@@ -358,8 +358,8 @@ The following are the main iteration methods
 const array = [10, 20, 30, 40, 50, 60];
 array.map((e) => e / 10); // returns a transformed array equals to [1,2,3,4,5]
 array.filter((e) => e <= 30); // returns a filtered array equals to [10, 20, 30]
-array.___((e) => e === 20); // returns 20
-array.___((e) => e === 20); // returns true
+array.find((e) => e === 20); // returns 20
+array.include((e) => e === 20); // returns true
 array.reduce((prev, current) => prev + current); // returns the sum of the array (210)
 ```
 
@@ -461,5 +461,5 @@ class ClassName {
 
 ```js
 class ParentClassName{}
-class ChildClassName extendes ParentClassName{}
+class ChildClassName extends ParentClassName{}
 ```

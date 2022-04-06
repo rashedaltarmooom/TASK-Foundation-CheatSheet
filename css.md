@@ -41,7 +41,7 @@ h1 {
 ### Ids
 
 ```css
-.box1 {
+box1 {
   /* This will change the styling for every tag 
     in the linked html file that implemented 
     the id box1. 
@@ -97,7 +97,7 @@ font-size: 15 px;
 font-family: "Times New Roman", Times, serif;
 
 /*To change the font width */
-width: 50%;
+transform: scale(4, 1);
 ```
 
 ### Sizes
@@ -138,7 +138,7 @@ Making the position ____ allows you to use the following properties
 position: relative;
 
 /*When position is (absolute), you can put things stacking on each other, but you can specify which element should be on visible on the top of another element, we use ___ and add a higher number to it */
-______: 1000;
+z-index: 1000;
 ```
 
 ### Display
